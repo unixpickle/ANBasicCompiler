@@ -72,8 +72,8 @@
         @">", @"<", @"<=", @">=", @"=", @"!=",
         @";", @":", @"\n", @"=>" // control operators, we state they are operators
     };                           // here, but they are really just control characters.
-    NSCharacterSet * numChars = [NSCharacterSet characterSetWithCharactersInString:@".01234567890"];
-    NSCharacterSet * nameChars = [NSCharacterSet characterSetWithCharactersInString:@"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ#"];
+    NSCharacterSet * numChars = [NSCharacterSet characterSetWithCharactersInString:@".0123456789"];
+    NSCharacterSet * nameChars = [NSCharacterSet characterSetWithCharactersInString:@"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ#?"];
     if (![self chompCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]) return nil;
     if (offset >= [string length]) return nil;
     unichar startChar = [string characterAtIndex:offset];
@@ -129,7 +129,7 @@
     
     while (offset < [string length]) {
         unichar aChar = [string characterAtIndex:offset];
-        if (aChar != '#' && !isalpha(aChar)) {
+        if (aChar != '#' && aChar != '?' && !isalpha(aChar)) {
             break;
         } else {
             [nameToken appendFormat:@"%C", aChar];

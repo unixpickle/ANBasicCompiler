@@ -18,7 +18,7 @@
     NSString * functionNames[] = {
         @"sin", @"cos", @"tan", @"arcsin", @"arccos", @"arctan",
         @"log", @"ln", @"sqrt",
-        @"Abs", @"Ran#", @"Int", @"-"
+        @"Abs", @"Ran#", @"Int", @"-", @"?"
     };
     for (NSUInteger i = 0; i < (sizeof(functionNames) / sizeof(NSString *)); i++) {
         if ([functionNames[i] isEqualToString:aTokenString]) {
@@ -38,7 +38,7 @@
 
 - (BOOL)functionTakesArgument {
     NSString * argLess[] = {
-        @"Ran#"
+        @"Ran#", @"?"
     };
     for (NSUInteger i = 0; i < (sizeof(argLess) / sizeof(NSString *)); i++) {
         if ([argLess[i] isEqualToString:functionName]) {

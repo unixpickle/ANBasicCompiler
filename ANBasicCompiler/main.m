@@ -15,12 +15,12 @@ int compileMain (NSString * inputFile, NSString * outputFile, const char * cmdNa
 
 int main (int argc, const char * argv[]) {
     @autoreleasepool {
-        
         // my debug code, so that I can execute this through Xcode and test it
         // with my ANBasic script:
         //
-        // return compileMain(@"/Users/alex/Desktop/myscript", nil, "anbc");
+        return compileMain(@"/Users/alex/Desktop/myscript", nil, "anbc");
         
+        /*
         if (argc == 1) {
             return printUsage(argv[0]);
         }
@@ -35,6 +35,7 @@ int main (int argc, const char * argv[]) {
         }
         
         return compileMain(inputFile, outputFile, argv[0]);
+         */
     }
 }
 

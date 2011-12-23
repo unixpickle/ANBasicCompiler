@@ -117,19 +117,9 @@
             }
         }
         
-        // check if the line is the beginning a potential inner block.
-        if ([ANBasicTokenIfControlBlock isLineIfStatement:nextLine]) {
-            ANBasicTokenControlBlock * ifControl = [self readIfStatement:nextLine];
-            if (!ifControl) return nil;
-            [[block tokens] addObject:ifControl];
-        } else if ([ANBasicTokenWhileControlBlock isLineWhileBlock:nextLine]) {
-            ANBasicTokenControlBlock * whileControl = [self readWhileLoop:nextLine];
-            if (!whileControl) return nil;
-            [[block tokens] addObject:whileControl];
-        } else {
-            // normal line, add it to the block
-            [[block tokens] addObject:nextLine];
-        }
+        ANBasicToken * token = [self readSubBlockOrReturn:nextLine];
+        if (!token) return nil;
+        [[block tokens] addObject:token];
     }
     
     if (nextLine == nil) return nil;
@@ -145,6 +135,25 @@
 }
 
 #pragma mark Control Blocks
+
+- (ANBasicToken *)readSubBlockOrReturn:(ANBasicTokenBlock *)line {
+    if ([ANBasicTokenIfControlBlock isLineIfStatement:line]) {
+        ANBasicTokenControlBlock * ifControl = [self readIfStatement:line];
+        if (!ifControl) return nil;
+        return ifControl;
+    } else if ([ANBasicTokenWhileControlBlock isLineWhileBlock:line]) {
+        ANBasicTokenControlBlock * whileControl = [self readWhileLoop:line];
+        if (!whileControl) return nil;
+        return whileControl;
+    } else if ([ANBasicTokenForControlBlock isLineForBlock:line]) {
+        ANBasicTokenForControlBlock * forControl = [self readForLoop:line];
+        if (!forControl) return nil;
+        return forControl;
+    } else {
+        // normal line, no need to read additional lines
+       return line;
+    }
+}
 
 - (ANBasicTokenIfControlBlock *)readIfStatement:(ANBasicTokenBlock *)ifStatementHeader {
     [ifStatementHeader removeFirstToken];
@@ -216,6 +225,19 @@
     if (!whileBody || [whileBody isKindOfClass:[ANBasicTokenEOF class]]) return nil;
     [whileBlock setLoopBody:whileBody];
     return whileBlock;
+}
+
+- (ANBasicTokenForControlBlock *)readForLoop:(ANBasicTokenBlock *)forHeader {
+    ANBasicTokenForControlBlock * forBlock = [[ANBasicTokenForControlBlock alloc] initWithForHeader:forHeader];
+    if (!forBlock) return nil;
+    
+    NSArray * next = [NSArray arrayWithObject:@"Next"];
+    ANBasicTokenBlock * forBody = [self readUntilControlTerminators:next
+                                                         terminator:nil];
+    
+    if (!forBody || [forBody isKindOfClass:[ANBasicTokenEOF class]]) return nil;
+    [forBlock setLoopBody:forBody];
+    return forBlock;
 }
 
 #pragma mark Per-Line Grouping

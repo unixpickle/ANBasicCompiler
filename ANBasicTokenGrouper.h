@@ -11,6 +11,7 @@
 #import "ANBasicTokenBlock.h"
 #import "ANBasicTokenIfControlBlock.h"
 #import "ANBasicTokenWhileControlBlock.h"
+#import "ANBasicTokenForControlBlock.h"
 #import "ANBasicTokenEOF.h"
 
 @interface ANBasicTokenGrouper : NSObject {
@@ -67,8 +68,10 @@
                                    terminatingLine:(ANBasicTokenBlock * __autoreleasing *)termLine;
 
 // specialized control blocks
+- (ANBasicToken *)readSubBlockOrReturn:(ANBasicTokenBlock *)line;
 - (ANBasicTokenIfControlBlock *)readIfStatement:(ANBasicTokenBlock *)ifStatementHeader;
 - (ANBasicTokenWhileControlBlock *)readWhileLoop:(ANBasicTokenBlock *)whileHeader;
+- (ANBasicTokenForControlBlock *)readForLoop:(ANBasicTokenBlock *)forHeader;
 
 - (BOOL)functionizeNegatives:(ANBasicTokenBlock *)block;
 - (BOOL)groupFunctionsAndExponents:(ANBasicTokenBlock *)block;

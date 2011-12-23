@@ -30,6 +30,7 @@
 		FA50F4AA149CFF0D0080E7B6 /* ANBasicTokenVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = FA50F4A9149CFF0D0080E7B6 /* ANBasicTokenVariable.m */; };
 		FA50F4B0149D06950080E7B6 /* ANBasicTokenizedScript.m in Sources */ = {isa = PBXBuildFile; fileRef = FA50F4AF149D06950080E7B6 /* ANBasicTokenizedScript.m */; };
 		FA50F4B3149D0DD70080E7B6 /* ANBasicTokenString.m in Sources */ = {isa = PBXBuildFile; fileRef = FA50F4B2149D0DD70080E7B6 /* ANBasicTokenString.m */; };
+		FA7876CC14A5094000A92B9F /* ANBasicTokenForControlBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7876CB14A5094000A92B9F /* ANBasicTokenForControlBlock.m */; };
 		FA8FD35F149D43E100D8F2BC /* ANBasicOperatorObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8FD35E149D43E100D8F2BC /* ANBasicOperatorObject.m */; };
 		FA8FD363149D467800D8F2BC /* ANBasicFunctionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8FD362149D467800D8F2BC /* ANBasicFunctionObject.m */; };
 		FA8FD366149D48C700D8F2BC /* ANBasicBlockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8FD365149D48C700D8F2BC /* ANBasicBlockObject.m */; };
@@ -95,6 +96,8 @@
 		FA50F4AF149D06950080E7B6 /* ANBasicTokenizedScript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANBasicTokenizedScript.m; sourceTree = "<group>"; };
 		FA50F4B1149D0DD60080E7B6 /* ANBasicTokenString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANBasicTokenString.h; sourceTree = "<group>"; };
 		FA50F4B2149D0DD70080E7B6 /* ANBasicTokenString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANBasicTokenString.m; sourceTree = "<group>"; };
+		FA7876CA14A5094000A92B9F /* ANBasicTokenForControlBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANBasicTokenForControlBlock.h; sourceTree = "<group>"; };
+		FA7876CB14A5094000A92B9F /* ANBasicTokenForControlBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANBasicTokenForControlBlock.m; sourceTree = "<group>"; };
 		FA8FD35D149D43E100D8F2BC /* ANBasicOperatorObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANBasicOperatorObject.h; sourceTree = "<group>"; };
 		FA8FD35E149D43E100D8F2BC /* ANBasicOperatorObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANBasicOperatorObject.m; sourceTree = "<group>"; };
 		FA8FD361149D467800D8F2BC /* ANBasicFunctionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANBasicFunctionObject.h; sourceTree = "<group>"; };
@@ -126,6 +129,8 @@
 				FA09519714A2C9B0000D0233 /* ANBasicTokenIfControlBlock.m */,
 				FA09519914A2D7DE000D0233 /* ANBasicTokenWhileControlBlock.h */,
 				FA09519A14A2D7DE000D0233 /* ANBasicTokenWhileControlBlock.m */,
+				FA7876CA14A5094000A92B9F /* ANBasicTokenForControlBlock.h */,
+				FA7876CB14A5094000A92B9F /* ANBasicTokenForControlBlock.m */,
 			);
 			name = "Control Blocks";
 			sourceTree = "<group>";
@@ -339,6 +344,7 @@
 				FA09519814A2C9B0000D0233 /* ANBasicTokenIfControlBlock.m in Sources */,
 				FA09519B14A2D7DE000D0233 /* ANBasicTokenWhileControlBlock.m in Sources */,
 				FA09519E14A3D321000D0233 /* ANBasicTokenEOF.m in Sources */,
+				FA7876CC14A5094000A92B9F /* ANBasicTokenForControlBlock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

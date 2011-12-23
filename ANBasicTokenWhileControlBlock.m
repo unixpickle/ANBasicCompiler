@@ -27,7 +27,11 @@
     }
     ANBasicTokenControl * control = (ANBasicTokenControl *)firstToken;
     return [[control controlName] isEqualToString:@"While"];
-    
+}
+
+- (NSString *)description {
+    return [NSString stringWithFormat:@"<ANBasicTokenWhileControlBlock (condition=%@, body=%@)>",
+            condition, loopBody];
 }
 
 @end

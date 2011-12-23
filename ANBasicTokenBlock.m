@@ -54,6 +54,8 @@
     return newString;
 }
 
+#pragma mark Convenience
+
 - (ANBasicToken *)firstToken {
     if ([tokens count] > 0) {
         ANBasicToken * firstToken = [tokens objectAtIndex:0];
@@ -73,6 +75,11 @@
             [tokens removeObjectAtIndex:0];
         }
     }
+}
+
+- (ANBasicTokenBlock *)blockWithTokensInRange:(NSRange)aRange {
+    NSArray * subArray = [tokens subarrayWithRange:aRange];
+    return [[ANBasicTokenBlock alloc] initWithTokens:subArray];
 }
 
 @end

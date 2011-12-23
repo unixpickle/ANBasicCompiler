@@ -17,7 +17,10 @@
 @property (readwrite) BOOL printOutput;
 
 - (id)initWithTokens:(NSArray *)someTokens;
+
 - (ANBasicToken *)firstToken;
 - (void)removeFirstToken;
+
+- (ANBasicTokenBlock *)blockWithTokensInRange:(NSRange)aRange;
 
 @end
