@@ -21,7 +21,8 @@ typedef enum {
     ANBasicFunctionTypeAbs = 9,
     ANBasicFunctionTypeRanNum = 10,
     ANBasicFunctionTypeInt = 11,
-    ANBasicFunctionTypeNegate = 12
+    ANBasicFunctionTypeNegate = 12,
+    ANBasicFunctionTypeInput = 13
 } ANBasicFunctionType;
 
 @interface ANBasicFunctionObject : ANBasicCodeObject {

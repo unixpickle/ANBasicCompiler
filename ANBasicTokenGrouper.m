@@ -103,6 +103,7 @@
         if (![self groupFunctionsAndExponents:nextLine]) return nil;
         if (![self groupMultiplicationDivision:nextLine]) return nil;
         if (![self groupAdditionSubtraction:nextLine]) return nil;
+        if (![self groupComparators:nextLine]) return nil;
         
         // check if the line is a terminator for the control block
         if ([[nextLine tokens] count] != 0) {
@@ -138,17 +139,15 @@
 
 - (ANBasicToken *)readSubBlockOrReturn:(ANBasicTokenBlock *)line {
     if ([ANBasicTokenIfControlBlock isLineIfStatement:line]) {
-        ANBasicTokenControlBlock * ifControl = [self readIfStatement:line];
-        if (!ifControl) return nil;
-        return ifControl;
+        return [self readIfStatement:line];
     } else if ([ANBasicTokenWhileControlBlock isLineWhileBlock:line]) {
-        ANBasicTokenControlBlock * whileControl = [self readWhileLoop:line];
-        if (!whileControl) return nil;
-        return whileControl;
+        return [self readWhileLoop:line];
     } else if ([ANBasicTokenForControlBlock isLineForBlock:line]) {
-        ANBasicTokenForControlBlock * forControl = [self readForLoop:line];
-        if (!forControl) return nil;
-        return forControl;
+        return [self readForLoop:line];
+    } else if ([ANBasicTokenLabelControlBlock isLineLabelBlock:line]) {
+        return [[ANBasicTokenLabelControlBlock alloc] initWithLabelBlock:line];
+    } else if ([ANBasicTokenGotoControlBlock isLineGotoBlock:line]) {
+        return [[ANBasicTokenGotoControlBlock alloc] initWithGotoBlock:line];
     } else {
         // normal line, no need to read additional lines
        return line;
@@ -160,6 +159,8 @@
     
     ANBasicTokenIfControlBlock * ifBlock = [[ANBasicTokenIfControlBlock alloc] init];
     [ifBlock setCondition:ifStatementHeader];
+    
+    if (![self skipPastControlBlock:@"Then"]) return nil;
     
     // read until endif or else
     NSArray * elseEndif = [NSArray arrayWithObjects:@"Else", @"IfEnd", nil];
@@ -175,6 +176,7 @@
     }
     
     // the first token in an if statement must be a "Then" token
+    /*
     ANBasicToken * firstToken = [block firstToken];
     if (![firstToken isKindOfClass:[ANBasicTokenControl class]]) {
         return nil;
@@ -186,13 +188,16 @@
     // since the "Then" control token doesn't serve a real purpose, we will remove it
     // for convenience
     [block removeFirstToken];
+    */
     
     [ifBlock setMainBody:block];
     
     if (terminatingControl && [[terminatingControl controlName] isEqualToString:@"Else"]) {
-        // the control line begins the else block, and thus, we remove the Else token itself,
-        // and will later insert it as the first line of the else body
+        // the control line begins the else block, and thus, we remove the Else token itself
         [termLine removeFirstToken];
+        
+        // now, read the line as if it was a normal line in the script
+        ANBasicToken * startElseToken = [self readSubBlockOrReturn:termLine];
         
         NSArray * ifEnd = [NSArray arrayWithObject:@"IfEnd"];
         ANBasicTokenBlock * elseBlock = [self readUntilControlTerminators:ifEnd
@@ -206,7 +211,7 @@
             elseBlock = [[ANBasicTokenBlock alloc] init];
         }
         
-        if ([termLine.tokens count] > 0) [elseBlock.tokens insertObject:termLine atIndex:0];
+        [elseBlock.tokens insertObject:startElseToken atIndex:0];
         [ifBlock setElseBody:elseBlock];
     }
     
@@ -238,6 +243,17 @@
     if (!forBody || [forBody isKindOfClass:[ANBasicTokenEOF class]]) return nil;
     [forBlock setLoopBody:forBody];
     return forBlock;
+}
+
+- (BOOL)skipPastControlBlock:(NSString *)controlName {
+    ANBasicToken * token = nil;
+    while (![(token = [self nextToken]) isKindOfClass:[ANBasicTokenEOF class]]) {
+        if ([token isKindOfClass:[ANBasicTokenControl class]]) {
+            ANBasicTokenControl * control = (ANBasicTokenControl *)token;
+            if ([[control controlName] isEqualToString:controlName]) return YES;
+        }
+    }
+    return NO;
 }
 
 #pragma mark Per-Line Grouping
@@ -368,6 +384,37 @@
             }
         } else if ([token isKindOfClass:[ANBasicTokenBlock class]]) {
             if (![self groupAdditionSubtraction:(ANBasicTokenBlock *)token]) {
+                return NO;
+            }
+        }
+    }
+    return YES;
+}
+
+- (BOOL)groupComparators:(ANBasicTokenBlock *)block {
+    for (NSInteger i = [block.tokens count] - 1; i >= 0; i--) {
+        ANBasicToken * token = [block.tokens objectAtIndex:i];
+        if ([token isKindOfClass:[ANBasicTokenOperator class]]) {
+            ANBasicTokenOperator * operator = (ANBasicTokenOperator *)token;
+            if ([operator isComparatorOperator]) {
+                if (i + 1 == [block.tokens count] || i - 1 < 0) {
+                    return NO;
+                }
+                
+                // group the previous expression with the next one with an exponent
+                // operator 
+                ANBasicToken * lastToken = [block.tokens objectAtIndex:i - 1];
+                ANBasicToken * nextToken = [block.tokens objectAtIndex:i + 1];
+                
+                NSArray * tokenArray = [NSArray arrayWithObjects:lastToken, operator, nextToken, nil];
+                ANBasicTokenBlock * powerGroup = [[ANBasicTokenBlock alloc] initWithTokens:tokenArray];
+                [block.tokens removeObjectAtIndex:i + 1];
+                [block.tokens removeObjectAtIndex:i];
+                [block.tokens replaceObjectAtIndex:(i - 1) withObject:powerGroup];
+                i--;
+            }
+        } else if ([token isKindOfClass:[ANBasicTokenBlock class]]) {
+            if (![self groupComparators:(ANBasicTokenBlock *)token]) {
                 return NO;
             }
         }

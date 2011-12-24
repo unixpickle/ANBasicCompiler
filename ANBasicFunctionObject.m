@@ -29,7 +29,8 @@
         {@"Abs", ANBasicFunctionTypeAbs},
         {@"Ran#", ANBasicFunctionTypeRanNum},
         {@"Int", ANBasicFunctionTypeInt},
-        {@"-", ANBasicFunctionTypeNegate}
+        {@"-", ANBasicFunctionTypeNegate},
+        {@"?", ANBasicFunctionTypeInput}
     };
     for (NSUInteger i = 0; i < (sizeof(functionToString) / sizeof(NSString *)); i++) {
         if ([functionToString[i].functionName isEqualToString:functionName]) {

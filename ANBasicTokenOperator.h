@@ -17,4 +17,6 @@
 + (BOOL)isOperatorName:(NSString *)aTokenName;
 - (id)initWithOperatorName:(NSString *)aName;
 
+- (BOOL)isComparatorOperator;
+
 @end

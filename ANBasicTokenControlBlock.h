@@ -11,7 +11,9 @@
 typedef enum {
     ANBasicControlTypeForLoop = 1,
     ANBasicControlTypeWhileLoop = 2,
-    ANBasicControlTypeIfStatement = 3
+    ANBasicControlTypeIfStatement = 3,
+    ANBasicControlTypeLabel = 4,
+    ANBasicControlTypeGoto = 5
 } ANBasicTokenControlBlockType;
 
 @interface ANBasicTokenControlBlock : ANBasicToken {

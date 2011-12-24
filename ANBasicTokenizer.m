@@ -89,6 +89,8 @@
             return [[ANBasicTokenControl alloc] initWithControlName:nameString];
         } else if ([ANBasicTokenVariable isVariableName:nameString]) {
             return [[ANBasicTokenVariable alloc] initWithVariableName:nameString];
+        } else if ([ANBasicTokenOperator isOperatorName:nameString]) {
+            return [[ANBasicTokenOperator alloc] initWithOperatorName:nameString];
         }
         return nil;
     } else if (startChar == '"') {
@@ -145,7 +147,7 @@
         @"+", @"-", @"*", @"/", @"^",
         @"->", @"(", @")",
         @">", @"<", @"<=", @">=", @"=", @"!=",
-        @";", @":", @"\n", @"=>"
+        @";", @":", @"\n", @"=>",
     };
     NSMutableString * opString = [[NSMutableString alloc] init];
     NSString * operatorString = nil;

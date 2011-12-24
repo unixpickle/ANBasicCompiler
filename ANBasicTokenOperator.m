@@ -16,7 +16,8 @@
     NSString * operators[] = {
         @"+", @"-", @"*", @"/", @"^",
         @"->", @"(", @")",
-        @">", @"<", @"<=", @">=", @"=", @"!="
+        @">", @"<", @"<=", @">=", @"=", @"!=",
+        @"And", @"Or"
     };
     for (NSUInteger i = 0; i < (sizeof(operators) / sizeof(NSString *)); i++) {
         if ([operators[i] isEqualToString:aTokenName]) {
@@ -32,6 +33,18 @@
         operatorName = aName;
     }
     return self;
+}
+
+- (BOOL)isComparatorOperator {
+    NSString * comparators[] = {
+        @">", @"<", @"<=", @">=", @"=", @"!="
+    };
+    for (NSUInteger i = 0; i < (sizeof(comparators) / sizeof(NSString *)); i++) {
+        if ([comparators[i] isEqualToString:operatorName]) {
+            return YES;
+        }
+    }
+    return NO;
 }
 
 - (NSString *)stringValue {

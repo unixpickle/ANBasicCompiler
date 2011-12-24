@@ -12,6 +12,8 @@
 #import "ANBasicTokenIfControlBlock.h"
 #import "ANBasicTokenWhileControlBlock.h"
 #import "ANBasicTokenForControlBlock.h"
+#import "ANBasicTokenLabelControlBlock.h"
+#import "ANBasicTokenGotoControlBlock.h"
 #import "ANBasicTokenEOF.h"
 
 @interface ANBasicTokenGrouper : NSObject {
@@ -45,6 +47,21 @@
 - (ANBasicTokenBlock *)readLine;
 
 /**
+ * Converts minus operators to negation functions where approriate.
+ */
+- (BOOL)functionizeNegatives:(ANBasicTokenBlock *)block;
+
+/**
+ * Goes from left to right and embeds exponentials in sub-blocks. Also applies
+ * functions to corresponding arguments.
+ */
+- (BOOL)groupFunctionsAndExponents:(ANBasicTokenBlock *)block;
+
+- (BOOL)groupMultiplicationDivision:(ANBasicTokenBlock *)block;
+- (BOOL)groupAdditionSubtraction:(ANBasicTokenBlock *)block;
+- (BOOL)groupComparators:(ANBasicTokenBlock *)block;
+
+/**
  * Read a control block. This is equivalent to calling
  * readUntilControlTerminators:terminator:terminatingLine: and passing nil for the
  * terminatingLine argument.
@@ -67,16 +84,19 @@
                                         terminator:(ANBasicTokenControl * __autoreleasing *)control
                                    terminatingLine:(ANBasicTokenBlock * __autoreleasing *)termLine;
 
-// specialized control blocks
+/**
+ * Given a line block that has just been read, this method can be used to expand a control block,
+ * and returns the encoded block as a token. If the line does not head a control block, the original line
+ * will be returned as a token block.
+ */
 - (ANBasicToken *)readSubBlockOrReturn:(ANBasicTokenBlock *)line;
+
+// specialized control blocks
 - (ANBasicTokenIfControlBlock *)readIfStatement:(ANBasicTokenBlock *)ifStatementHeader;
 - (ANBasicTokenWhileControlBlock *)readWhileLoop:(ANBasicTokenBlock *)whileHeader;
 - (ANBasicTokenForControlBlock *)readForLoop:(ANBasicTokenBlock *)forHeader;
 
-- (BOOL)functionizeNegatives:(ANBasicTokenBlock *)block;
-- (BOOL)groupFunctionsAndExponents:(ANBasicTokenBlock *)block;
-- (BOOL)groupMultiplicationDivision:(ANBasicTokenBlock *)block;
-- (BOOL)groupAdditionSubtraction:(ANBasicTokenBlock *)block;
+- (BOOL)skipPastControlBlock:(NSString *)controlName;
 
 /**
  * Reads all of the lines in the script, and puts them in a root block.
