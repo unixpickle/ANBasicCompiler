@@ -104,6 +104,7 @@
         if (![self groupMultiplicationDivision:nextLine]) return nil;
         if (![self groupAdditionSubtraction:nextLine]) return nil;
         if (![self groupComparators:nextLine]) return nil;
+        if (![self groupVariableAssignments:nextLine]) return nil;
         
         // check if the line is a terminator for the control block
         if ([[nextLine tokens] count] != 0) {
@@ -415,6 +416,31 @@
             }
         } else if ([token isKindOfClass:[ANBasicTokenBlock class]]) {
             if (![self groupComparators:(ANBasicTokenBlock *)token]) {
+                return NO;
+            }
+        }
+    }
+    return YES;
+}
+
+- (BOOL)groupVariableAssignments:(ANBasicTokenBlock *)block {
+    for (NSInteger i = [block.tokens count] - 1; i >= 0; i--) {
+        ANBasicToken * token = [block.tokens objectAtIndex:i];
+        if ([token isKindOfClass:[ANBasicTokenOperator class]]) {
+            ANBasicTokenOperator * operator = (ANBasicTokenOperator *)token;
+            if ([[operator operatorName] isEqualToString:@"->"]) {
+                if (i + 1 == [block.tokens count]) {
+                    return NO;
+                }
+                
+                ANBasicToken * nextToken = [block.tokens objectAtIndex:i + 1];
+                if (![nextToken isKindOfClass:[ANBasicTokenVariable class]]) return NO;
+                
+                [block.tokens removeObjectAtIndex:i];
+                [(ANBasicTokenVariable *)nextToken setIsAssignment:YES];
+            }
+        } else if ([token isKindOfClass:[ANBasicTokenBlock class]]) {
+            if (![self groupVariableAssignments:(ANBasicTokenBlock *)token]) {
                 return NO;
             }
         }

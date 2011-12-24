@@ -10,9 +10,11 @@
 
 @interface ANBasicTokenVariable : ANBasicToken {
     NSString * variableName;
+    BOOL isAssignment;
 }
 
 @property (readonly) NSString * variableName;
+@property (readwrite) BOOL isAssignment;
 
 + (BOOL)isVariableName:(NSString *)aTokenName;
 - (id)initWithVariableName:(NSString *)aName;

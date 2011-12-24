@@ -25,15 +25,6 @@
 		FA503DDE14A5702D00BFE121 /* ANBasicTokenWhileControlBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = FA503DD514A5702D00BFE121 /* ANBasicTokenWhileControlBlock.m */; };
 		FA503DDF14A5702D00BFE121 /* ANBasicTokenIfControlBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = FA503DD914A5702D00BFE121 /* ANBasicTokenIfControlBlock.m */; };
 		FA503DE014A5702D00BFE121 /* ANBasicTokenControlBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = FA503DDA14A5702D00BFE121 /* ANBasicTokenControlBlock.m */; };
-		FA503DEF14A5704B00BFE121 /* ANBasicFunctionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FA503DE114A5704B00BFE121 /* ANBasicFunctionObject.m */; };
-		FA503DF014A5704B00BFE121 /* ANBasicNumberObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FA503DE314A5704B00BFE121 /* ANBasicNumberObject.m */; };
-		FA503DF114A5704B00BFE121 /* ANBasicVariableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FA503DE514A5704B00BFE121 /* ANBasicVariableObject.m */; };
-		FA503DF214A5704B00BFE121 /* ANBasicBlockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FA503DE714A5704B00BFE121 /* ANBasicBlockObject.m */; };
-		FA503DF314A5704B00BFE121 /* ANBasicOperatorObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FA503DE914A5704B00BFE121 /* ANBasicOperatorObject.m */; };
-		FA503DF414A5704B00BFE121 /* ANBasicStringObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FA503DEC14A5704B00BFE121 /* ANBasicStringObject.m */; };
-		FA503DF514A5704B00BFE121 /* ANBasicCodeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FA503DEE14A5704B00BFE121 /* ANBasicCodeObject.m */; };
-		FA503DFA14A5705C00BFE121 /* ANBasicForLoopControl.m in Sources */ = {isa = PBXBuildFile; fileRef = FA503DF714A5705C00BFE121 /* ANBasicForLoopControl.m */; };
-		FA503DFB14A5705C00BFE121 /* ANBasicControlObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FA503DF814A5705C00BFE121 /* ANBasicControlObject.m */; };
 		FA50F487149CE20C0080E7B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA50F486149CE20C0080E7B6 /* Foundation.framework */; };
 		FA50F48A149CE20C0080E7B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA50F489149CE20C0080E7B6 /* main.m */; };
 		FA50F48E149CE20C0080E7B6 /* ANBasicCompiler.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA50F48D149CE20C0080E7B6 /* ANBasicCompiler.1 */; };
@@ -89,24 +80,6 @@
 		FA503DD814A5702D00BFE121 /* ANBasicTokenIfControlBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANBasicTokenIfControlBlock.h; sourceTree = "<group>"; };
 		FA503DD914A5702D00BFE121 /* ANBasicTokenIfControlBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANBasicTokenIfControlBlock.m; sourceTree = "<group>"; };
 		FA503DDA14A5702D00BFE121 /* ANBasicTokenControlBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANBasicTokenControlBlock.m; sourceTree = "<group>"; };
-		FA503DE114A5704B00BFE121 /* ANBasicFunctionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANBasicFunctionObject.m; sourceTree = "<group>"; };
-		FA503DE214A5704B00BFE121 /* ANBasicFunctionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANBasicFunctionObject.h; sourceTree = "<group>"; };
-		FA503DE314A5704B00BFE121 /* ANBasicNumberObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANBasicNumberObject.m; sourceTree = "<group>"; };
-		FA503DE414A5704B00BFE121 /* ANBasicStringObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANBasicStringObject.h; sourceTree = "<group>"; };
-		FA503DE514A5704B00BFE121 /* ANBasicVariableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANBasicVariableObject.m; sourceTree = "<group>"; };
-		FA503DE614A5704B00BFE121 /* ANBasicVariableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANBasicVariableObject.h; sourceTree = "<group>"; };
-		FA503DE714A5704B00BFE121 /* ANBasicBlockObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANBasicBlockObject.m; sourceTree = "<group>"; };
-		FA503DE814A5704B00BFE121 /* ANBasicBlockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANBasicBlockObject.h; sourceTree = "<group>"; };
-		FA503DE914A5704B00BFE121 /* ANBasicOperatorObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANBasicOperatorObject.m; sourceTree = "<group>"; };
-		FA503DEA14A5704B00BFE121 /* ANBasicOperatorObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANBasicOperatorObject.h; sourceTree = "<group>"; };
-		FA503DEB14A5704B00BFE121 /* ANBasicNumberObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANBasicNumberObject.h; sourceTree = "<group>"; };
-		FA503DEC14A5704B00BFE121 /* ANBasicStringObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANBasicStringObject.m; sourceTree = "<group>"; };
-		FA503DED14A5704B00BFE121 /* ANBasicCodeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANBasicCodeObject.h; sourceTree = "<group>"; };
-		FA503DEE14A5704B00BFE121 /* ANBasicCodeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANBasicCodeObject.m; sourceTree = "<group>"; };
-		FA503DF614A5705C00BFE121 /* ANBasicForLoopControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANBasicForLoopControl.h; sourceTree = "<group>"; };
-		FA503DF714A5705C00BFE121 /* ANBasicForLoopControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANBasicForLoopControl.m; sourceTree = "<group>"; };
-		FA503DF814A5705C00BFE121 /* ANBasicControlObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANBasicControlObject.m; sourceTree = "<group>"; };
-		FA503DF914A5705C00BFE121 /* ANBasicControlObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANBasicControlObject.h; sourceTree = "<group>"; };
 		FA50F482149CE20C0080E7B6 /* ANBasicCompiler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ANBasicCompiler; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA50F486149CE20C0080E7B6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FA50F489149CE20C0080E7B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -141,20 +114,20 @@
 		FA503DA514A56F0200BFE121 /* Basic Tokens */ = {
 			isa = PBXGroup;
 			children = (
-				FA503DAB14A56FDB00BFE121 /* ANBasicTokenOperator.m */,
-				FA503DAC14A56FDB00BFE121 /* ANBasicTokenOperator.h */,
-				FA503DAD14A56FDB00BFE121 /* ANBasicTokenFunction.m */,
-				FA503DAE14A56FDB00BFE121 /* ANBasicTokenControl.m */,
-				FA503DAF14A56FDB00BFE121 /* ANBasicTokenControl.h */,
-				FA503DB014A56FDB00BFE121 /* ANBasicTokenFunction.h */,
-				FA503DB114A56FDB00BFE121 /* ANBasicTokenString.m */,
-				FA503DB214A56FDB00BFE121 /* ANBasicTokenString.h */,
-				FA503DB314A56FDB00BFE121 /* ANBasicTokenVariable.m */,
-				FA503DB414A56FDB00BFE121 /* ANBasicTokenNumber.m */,
-				FA503DB514A56FDB00BFE121 /* ANBasicTokenVariable.h */,
-				FA503DB614A56FDB00BFE121 /* ANBasicTokenNumber.h */,
-				FA503DB714A56FDB00BFE121 /* ANBasicToken.m */,
 				FA503DB814A56FDB00BFE121 /* ANBasicToken.h */,
+				FA503DB714A56FDB00BFE121 /* ANBasicToken.m */,
+				FA503DAC14A56FDB00BFE121 /* ANBasicTokenOperator.h */,
+				FA503DAB14A56FDB00BFE121 /* ANBasicTokenOperator.m */,
+				FA503DAF14A56FDB00BFE121 /* ANBasicTokenControl.h */,
+				FA503DAE14A56FDB00BFE121 /* ANBasicTokenControl.m */,
+				FA503DB014A56FDB00BFE121 /* ANBasicTokenFunction.h */,
+				FA503DAD14A56FDB00BFE121 /* ANBasicTokenFunction.m */,
+				FA503DB214A56FDB00BFE121 /* ANBasicTokenString.h */,
+				FA503DB114A56FDB00BFE121 /* ANBasicTokenString.m */,
+				FA503DB514A56FDB00BFE121 /* ANBasicTokenVariable.h */,
+				FA503DB314A56FDB00BFE121 /* ANBasicTokenVariable.m */,
+				FA503DB614A56FDB00BFE121 /* ANBasicTokenNumber.h */,
+				FA503DB414A56FDB00BFE121 /* ANBasicTokenNumber.m */,
 			);
 			path = "Basic Tokens";
 			sourceTree = "<group>";
@@ -172,20 +145,6 @@
 			isa = PBXGroup;
 			children = (
 				FA503DAA14A56F6800BFE121 /* Control */,
-				FA503DE114A5704B00BFE121 /* ANBasicFunctionObject.m */,
-				FA503DE214A5704B00BFE121 /* ANBasicFunctionObject.h */,
-				FA503DE314A5704B00BFE121 /* ANBasicNumberObject.m */,
-				FA503DE414A5704B00BFE121 /* ANBasicStringObject.h */,
-				FA503DE514A5704B00BFE121 /* ANBasicVariableObject.m */,
-				FA503DE614A5704B00BFE121 /* ANBasicVariableObject.h */,
-				FA503DE714A5704B00BFE121 /* ANBasicBlockObject.m */,
-				FA503DE814A5704B00BFE121 /* ANBasicBlockObject.h */,
-				FA503DE914A5704B00BFE121 /* ANBasicOperatorObject.m */,
-				FA503DEA14A5704B00BFE121 /* ANBasicOperatorObject.h */,
-				FA503DEB14A5704B00BFE121 /* ANBasicNumberObject.h */,
-				FA503DEC14A5704B00BFE121 /* ANBasicStringObject.m */,
-				FA503DED14A5704B00BFE121 /* ANBasicCodeObject.h */,
-				FA503DEE14A5704B00BFE121 /* ANBasicCodeObject.m */,
 			);
 			path = "Machine Code";
 			sourceTree = "<group>";
@@ -194,10 +153,10 @@
 			isa = PBXGroup;
 			children = (
 				FA503DA914A56F4300BFE121 /* Control Blocks */,
-				FA503DC614A5701900BFE121 /* ANBasicTokenGrouper.m */,
 				FA503DC714A5701900BFE121 /* ANBasicTokenGrouper.h */,
-				FA503DC814A5701900BFE121 /* ANBasicTokenBlock.m */,
+				FA503DC614A5701900BFE121 /* ANBasicTokenGrouper.m */,
 				FA503DC914A5701900BFE121 /* ANBasicTokenBlock.h */,
+				FA503DC814A5701900BFE121 /* ANBasicTokenBlock.m */,
 				FA503DCA14A5701900BFE121 /* ANBasicTokenEOF.h */,
 				FA503DCB14A5701900BFE121 /* ANBasicTokenEOF.m */,
 			);
@@ -226,10 +185,6 @@
 		FA503DAA14A56F6800BFE121 /* Control */ = {
 			isa = PBXGroup;
 			children = (
-				FA503DF614A5705C00BFE121 /* ANBasicForLoopControl.h */,
-				FA503DF714A5705C00BFE121 /* ANBasicForLoopControl.m */,
-				FA503DF814A5705C00BFE121 /* ANBasicControlObject.m */,
-				FA503DF914A5705C00BFE121 /* ANBasicControlObject.h */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -348,15 +303,6 @@
 				FA503DDE14A5702D00BFE121 /* ANBasicTokenWhileControlBlock.m in Sources */,
 				FA503DDF14A5702D00BFE121 /* ANBasicTokenIfControlBlock.m in Sources */,
 				FA503DE014A5702D00BFE121 /* ANBasicTokenControlBlock.m in Sources */,
-				FA503DEF14A5704B00BFE121 /* ANBasicFunctionObject.m in Sources */,
-				FA503DF014A5704B00BFE121 /* ANBasicNumberObject.m in Sources */,
-				FA503DF114A5704B00BFE121 /* ANBasicVariableObject.m in Sources */,
-				FA503DF214A5704B00BFE121 /* ANBasicBlockObject.m in Sources */,
-				FA503DF314A5704B00BFE121 /* ANBasicOperatorObject.m in Sources */,
-				FA503DF414A5704B00BFE121 /* ANBasicStringObject.m in Sources */,
-				FA503DF514A5704B00BFE121 /* ANBasicCodeObject.m in Sources */,
-				FA503DFA14A5705C00BFE121 /* ANBasicForLoopControl.m in Sources */,
-				FA503DFB14A5705C00BFE121 /* ANBasicControlObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -60,6 +60,7 @@
 - (BOOL)groupMultiplicationDivision:(ANBasicTokenBlock *)block;
 - (BOOL)groupAdditionSubtraction:(ANBasicTokenBlock *)block;
 - (BOOL)groupComparators:(ANBasicTokenBlock *)block;
+- (BOOL)groupVariableAssignments:(ANBasicTokenBlock *)block;
 
 /**
  * Read a control block. This is equivalent to calling

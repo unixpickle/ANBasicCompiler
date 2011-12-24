@@ -11,6 +11,7 @@
 @implementation ANBasicTokenVariable
 
 @synthesize variableName;
+@synthesize isAssignment;
 
 + (BOOL)isVariableName:(NSString *)aTokenName {
     if ([aTokenName length] != 1) {
@@ -34,7 +35,8 @@
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"<ANBasicTokenVariable: %@>", [self stringValue]];
+    return [NSString stringWithFormat:@"<ANBasicTokenVariable: %@ (write=%@)>", [self stringValue],
+            (isAssignment ? @"YES" : @"NO")];
 }
 
 @end
