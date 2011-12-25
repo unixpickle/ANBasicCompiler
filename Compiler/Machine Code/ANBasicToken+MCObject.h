@@ -11,6 +11,4 @@
 
 @interface ANBasicToken (MCObject) <ANBasicMCObject>
 
-- (UInt8)machineCodeType;
-
 @end

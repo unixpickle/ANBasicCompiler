@@ -11,6 +11,7 @@
 
 @protocol ANBasicMCObject
 
+- (UInt8)machineCodeType;
 - (BOOL)encodeToBuffer:(ANBasicByteBuffer *)buffer;
 + (id<ANBasicMCObject>)decodeFromBuffer:(ANBasicByteBuffer *)buffer type:(UInt8)readType;
 

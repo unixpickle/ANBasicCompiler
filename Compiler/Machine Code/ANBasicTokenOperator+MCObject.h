@@ -9,17 +9,6 @@
 #import "ANBasicTokenOperator.h"
 #import "ANBasicToken+MCObject.h"
 
-/*
-
- NSString * operators[] = {
- @"+", @"-", @"*", @"/", @"^",
- @"->", @"(", @")",
- @">", @"<", @"<=", @">=", @"=", @"!=",
- @"And", @"Or"
- };
-
-*/
-
 #define ANBasicMCObjectOperatorType 1
 
 typedef enum {
