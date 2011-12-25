@@ -8,6 +8,12 @@
 
 #import "ANBasicToken.h"
 
+/**
+ * This is a concrete ANBasicToken subclass that represents a string of
+ * characters. In the script, this would be represented as "A STRING".
+ * 
+ * Grouping has no effect on ANBasicTokenString objects.
+ */
 @interface ANBasicTokenString : ANBasicToken {
     NSString * string;
 }

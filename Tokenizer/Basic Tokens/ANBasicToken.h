@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ * A basic abstract class representing a token of ANBasic source code.
+ */
 @interface ANBasicToken : NSObject {
     
 }

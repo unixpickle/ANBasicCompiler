@@ -16,6 +16,13 @@
 #import "ANBasicTokenGotoControlBlock.h"
 #import "ANBasicTokenEOF.h"
 
+/**
+ * This class can read an un-grouped ANBasic script, and group it into blocks.
+ * All scripts must be grouped before they can be correctly compiled.
+ *
+ * Usually, external usage of this class is as simple as creating an instance
+ * with a given ANBasicTokenizedScript, and calling readScriptBlock.
+ */
 @interface ANBasicTokenGrouper : NSObject {
     ANBasicTokenizedScript * script;
     NSUInteger offset;

@@ -197,18 +197,18 @@
 		FA503DA914A56F4300BFE121 /* Control Blocks */ = {
 			isa = PBXGroup;
 			children = (
-				FA503DCF14A5702D00BFE121 /* ANBasicTokenLabelControlBlock.m */,
-				FA503DD014A5702D00BFE121 /* ANBasicTokenGotoControlBlock.m */,
-				FA503DD114A5702D00BFE121 /* ANBasicTokenLabelControlBlock.h */,
 				FA503DD214A5702D00BFE121 /* ANBasicTokenControlBlock.h */,
+				FA503DDA14A5702D00BFE121 /* ANBasicTokenControlBlock.m */,
+				FA503DD114A5702D00BFE121 /* ANBasicTokenLabelControlBlock.h */,
+				FA503DCF14A5702D00BFE121 /* ANBasicTokenLabelControlBlock.m */,
 				FA503DD314A5702D00BFE121 /* ANBasicTokenGotoControlBlock.h */,
-				FA503DD414A5702D00BFE121 /* ANBasicTokenForControlBlock.m */,
-				FA503DD514A5702D00BFE121 /* ANBasicTokenWhileControlBlock.m */,
+				FA503DD014A5702D00BFE121 /* ANBasicTokenGotoControlBlock.m */,
 				FA503DD614A5702D00BFE121 /* ANBasicTokenForControlBlock.h */,
+				FA503DD414A5702D00BFE121 /* ANBasicTokenForControlBlock.m */,
 				FA503DD714A5702D00BFE121 /* ANBasicTokenWhileControlBlock.h */,
+				FA503DD514A5702D00BFE121 /* ANBasicTokenWhileControlBlock.m */,
 				FA503DD814A5702D00BFE121 /* ANBasicTokenIfControlBlock.h */,
 				FA503DD914A5702D00BFE121 /* ANBasicTokenIfControlBlock.m */,
-				FA503DDA14A5702D00BFE121 /* ANBasicTokenControlBlock.m */,
 			);
 			path = "Control Blocks";
 			sourceTree = "<group>";

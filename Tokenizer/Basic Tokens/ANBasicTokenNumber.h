@@ -8,6 +8,12 @@
 
 #import "ANBasicToken.h"
 
+/**
+ * This is a concrete ANBasicToken subclass that represents a floating-point decimal number
+ * in the script.
+ *
+ * Grouping has no effect on ANBasicTokenNumber objects.
+ */
 @interface ANBasicTokenNumber : ANBasicToken {
     NSNumber * numberValue;
 }

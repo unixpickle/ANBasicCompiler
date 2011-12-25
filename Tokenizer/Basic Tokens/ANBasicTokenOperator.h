@@ -8,6 +8,16 @@
 
 #import "ANBasicToken.h"
 
+/**
+ * This is a concrete ANBasicToken subclass that represents a numerical operator
+ * in ANBasic source code.
+ * 
+ * Before the grouping stage of compilation, instances of ANBasicTokenOperator are
+ * used to represent parentheses, and assignment operators, as well as numerical
+ * operators. After grouping, there is no need for ( and ) operators, because sub-blocks
+ * will take their place. The assignment operator (->) will be omitted by setting the
+ * isAssignment property on it's corresponding variable.
+ */
 @interface ANBasicTokenOperator : ANBasicToken {
     NSString * operatorName; 
 }
