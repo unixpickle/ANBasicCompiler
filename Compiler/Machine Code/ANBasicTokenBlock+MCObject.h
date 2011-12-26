@@ -9,7 +9,7 @@
 #import "ANBasicTokenBlock.h"
 #import "ANBasicToken+MCObject.h"
 
-#define ANBasicMCObjectBlockType 4
+#define ANBasicMCObjectBlockType 5
 
 @interface ANBasicTokenBlock (MCObject) <ANBasicMCObject>
 
