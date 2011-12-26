@@ -10,7 +10,7 @@
 
 const struct {
     __unsafe_unretained NSString * functionName;
-    __unsafe_unretained ANBasicTokenFunctionID functionID;
+    ANBasicTokenFunctionID functionID;
 } functionNames[] = {
     {@"sin", ANBasicTokenFunctionIDSin},
     {@"cos", ANBasicTokenFunctionIDCos},

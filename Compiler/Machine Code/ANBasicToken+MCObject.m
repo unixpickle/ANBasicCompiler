@@ -10,8 +10,11 @@
 #import "ANBasicTokenOperator+MCObject.h"
 #import "ANBasicTokenVariable+MCObject.h"
 #import "ANBasicTokenString+MCObject.h"
-#import "ANBasicTokenBlock+MCObject.h"
 #import "ANBasicTokenNumber+MCObject.h"
+#import "ANBasicTokenBlock+MCObject.h"
+#import "ANBasicTokenFunction+MCObject.h"
+#import "ANBasicTokenControl+MCObject.h"
+#import "ANBasicTokenControlBlock+MCObject.h"
 
 @implementation ANBasicToken (MCObject)
 
@@ -34,6 +37,9 @@
         {NSClassFromString(@"ANBasicTokenVariable"), ANBasicMCObjectVariableType},
         {NSClassFromString(@"ANBasicTokenNumber"), ANBasicMCObjectNumberType},
         {NSClassFromString(@"ANBasicTokenBlock"), ANBasicMCObjectBlockType},
+        {NSClassFromString(@"ANBasicTokenFunction"), ANBasicMCObjectFunctionType},
+        {NSClassFromString(@"ANBasicTokenControl"), ANBasicMCObjectControlType},
+        {NSClassFromString(@"ANBasicTokenControlBlock"), ANBasicMCObjectControlBlockType},
         {nil, 0}
     };
     

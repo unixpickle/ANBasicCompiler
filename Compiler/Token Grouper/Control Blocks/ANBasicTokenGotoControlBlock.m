@@ -21,6 +21,12 @@
     return [[control controlName] isEqualToString:@"Goto"];
 }
 
+- (id)init {
+    if ((self = [super initWithControlType:ANBasicControlTypeGoto])) {
+    }
+    return self;
+}
+
 - (id)initWithGotoBlock:(ANBasicTokenBlock *)aBlock {
     if ((self = [super initWithControlType:ANBasicControlTypeGoto])) {        
         if (![[self class] isLineGotoBlock:aBlock]) return nil;

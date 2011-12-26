@@ -21,6 +21,12 @@
     return [[control controlName] isEqualToString:@"Lbl"];
 }
 
+- (id)init {
+    if ((self = [super initWithControlType:ANBasicControlTypeLabel])) {
+    }
+    return self;
+}
+
 - (id)initWithLabelBlock:(ANBasicTokenBlock *)aBlock {
     if ((self = [super initWithControlType:ANBasicControlTypeLabel])) {        
         if (![[self class] isLineLabelBlock:aBlock]) return nil;

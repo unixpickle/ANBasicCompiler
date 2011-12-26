@@ -14,7 +14,7 @@
 @synthesize loopBody;
 
 - (id)init {
-    if ((self = [super initWithControlType:ANBasicControlTypeIfStatement])) {
+    if ((self = [super initWithControlType:ANBasicControlTypeWhileLoop])) {
     }
     return self;
 }

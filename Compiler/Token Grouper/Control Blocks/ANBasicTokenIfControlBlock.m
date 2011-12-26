@@ -15,7 +15,6 @@
 
 - (id)init {
     if ((self = [super initWithControlType:ANBasicControlTypeIfStatement])) {
-        
     }
     return self;
 }

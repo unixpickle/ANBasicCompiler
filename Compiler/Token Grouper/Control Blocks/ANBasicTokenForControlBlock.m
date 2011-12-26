@@ -22,6 +22,12 @@ static BOOL _ForBlockGetRanges (ANBasicTokenBlock * aBlock, NSRange * initialRan
     return _ForBlockGetRanges(aBlock, nil, nil, nil);
 }
 
+- (id)init {
+    if ((self = [super initWithControlType:ANBasicControlTypeForLoop])) {
+    }
+    return self;
+}
+
 - (id)initWithForHeader:(ANBasicTokenBlock *)forHeader {
     if ((self = [super initWithControlType:ANBasicControlTypeForLoop])) {
         NSRange initialRange;

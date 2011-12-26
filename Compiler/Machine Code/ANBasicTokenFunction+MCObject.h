@@ -11,23 +11,6 @@
 
 #define ANBasicMCObjectFunctionType 6
 
-/**
- {@"sin"},
- {@"cos"},
- {@"tan"},
- {@"arcsin"},
- {@"arccos"},
- {@"arctan"},
- {@"log"},
- {@"ln"},
- {@"sqrt"},
- {@"Abs"},
- {@"Ran#"},
- {@"Int"},
- {@"-"},
- {@"?"}
- */
-
 typedef enum {
     ANBasicTokenFunctionIDSin = 0,
     ANBasicTokenFunctionIDCos = 1,
