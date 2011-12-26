@@ -40,6 +40,7 @@
 		FAD56EAB14A7F1AF002E452F /* ANBasicTokenControl+MCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD56EAA14A7F1AF002E452F /* ANBasicTokenControl+MCObject.m */; };
 		FAD56EAF14A7F3CC002E452F /* ANBasicTokenControlBlock+MCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD56EAE14A7F3CC002E452F /* ANBasicTokenControlBlock+MCObject.m */; };
 		FAD56EB214A7F584002E452F /* ANBasicTokenIfControlBlock+MCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD56EB114A7F584002E452F /* ANBasicTokenIfControlBlock+MCObject.m */; };
+		FAD56EB514A7F7AD002E452F /* ANBasicTokenForControlBlock+MCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD56EB414A7F7AD002E452F /* ANBasicTokenForControlBlock+MCObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -122,6 +123,8 @@
 		FAD56EAE14A7F3CC002E452F /* ANBasicTokenControlBlock+MCObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ANBasicTokenControlBlock+MCObject.m"; sourceTree = "<group>"; };
 		FAD56EB014A7F584002E452F /* ANBasicTokenIfControlBlock+MCObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ANBasicTokenIfControlBlock+MCObject.h"; sourceTree = "<group>"; };
 		FAD56EB114A7F584002E452F /* ANBasicTokenIfControlBlock+MCObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ANBasicTokenIfControlBlock+MCObject.m"; sourceTree = "<group>"; };
+		FAD56EB314A7F7AD002E452F /* ANBasicTokenForControlBlock+MCObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ANBasicTokenForControlBlock+MCObject.h"; sourceTree = "<group>"; };
+		FAD56EB414A7F7AD002E452F /* ANBasicTokenForControlBlock+MCObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ANBasicTokenForControlBlock+MCObject.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,6 +311,8 @@
 				FAD56EAE14A7F3CC002E452F /* ANBasicTokenControlBlock+MCObject.m */,
 				FAD56EB014A7F584002E452F /* ANBasicTokenIfControlBlock+MCObject.h */,
 				FAD56EB114A7F584002E452F /* ANBasicTokenIfControlBlock+MCObject.m */,
+				FAD56EB314A7F7AD002E452F /* ANBasicTokenForControlBlock+MCObject.h */,
+				FAD56EB414A7F7AD002E452F /* ANBasicTokenForControlBlock+MCObject.m */,
 			);
 			name = "Control Blocks";
 			sourceTree = "<group>";
@@ -393,6 +398,7 @@
 				FAD56EAB14A7F1AF002E452F /* ANBasicTokenControl+MCObject.m in Sources */,
 				FAD56EAF14A7F3CC002E452F /* ANBasicTokenControlBlock+MCObject.m in Sources */,
 				FAD56EB214A7F584002E452F /* ANBasicTokenIfControlBlock+MCObject.m in Sources */,
+				FAD56EB514A7F7AD002E452F /* ANBasicTokenForControlBlock+MCObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
