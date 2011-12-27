@@ -11,7 +11,8 @@
 typedef enum {
     ANBasicRuntimeReturnTypeValue,
     ANBasicRuntimeReturnTypeGoto,
-    ANBasicRuntimeReturnTypeBreak
+    ANBasicRuntimeReturnTypeBreak,
+    ANBasicRuntimeReturnTypeStop
 } ANBasicRuntimeReturnType;
 
 @interface ANBasicRuntimeState : NSObject {
@@ -29,6 +30,7 @@ typedef enum {
 
 - (void)returnNumeric:(double)aNumber;
 - (void)gotoLineNumber:(int)number;
+- (void)resetReturnState;
 
 - (double)valueForVariableName:(NSString *)varName;
 - (void)setValue:(double)aValue forVariableName:(NSString *)varName;

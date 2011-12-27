@@ -19,7 +19,7 @@ int main (int argc, const char * argv[]) {
         // my debug code, so that I can execute this through Xcode and test it
         // with my ANBasic script:
         //
-        return compileMain(@"/Users/alex/Desktop/operator", @"/Users/alex/Desktop/operator.bin", "anbc");
+        return compileMain(@"/Users/alex/Desktop/gototest", @"/Users/alex/Desktop/gototest.bin", "anbc");
         
         /*
         if (argc == 1) {
@@ -71,7 +71,9 @@ int compileMain (NSString * inputFile, NSString * outputFile, const char * cmdNa
     ANBasicByteBuffer * buffer = [[ANBasicByteBuffer alloc] init];
     if (![block encodeToBuffer:buffer]) {
         fprintf(stderr, "%s: error: failed to encode machine code\n", cmdName);
+        return 1;
     }
+    
     [[buffer data] writeToFile:outputFile atomically:YES];
     
     [buffer setOffset:0];

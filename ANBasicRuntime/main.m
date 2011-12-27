@@ -14,7 +14,7 @@ int runtimeMain (const char * cmdName, NSString * scriptName);
 
 int main (int argc, const char * argv[]) {
     @autoreleasepool {
-        runtimeMain("anbrun", @"/Users/alex/Desktop/operator.bin");
+        runtimeMain("anbrun", @"/Users/alex/Desktop/gototest.bin");
         /*
         if (argc != 2) {
             fprintf(stderr, "Usage: %s <compiled script>\n", argv[0]);

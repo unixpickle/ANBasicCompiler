@@ -34,6 +34,12 @@
     returnType = ANBasicRuntimeReturnTypeValue;
 }
 
+- (void)resetReturnState {
+    returnType = ANBasicRuntimeReturnTypeValue;
+    returnNumber = 0;
+    gotoLineNumber = 0;
+}
+
 - (double)valueForVariableName:(NSString *)varName {
     return [[variableValues objectForKey:varName] doubleValue];
 }

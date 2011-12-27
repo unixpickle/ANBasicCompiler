@@ -18,7 +18,7 @@
     [super encodeToBuffer:buffer];
     [buffer writeByte:self.printOutput];
     for (NSUInteger i = 0; i < [tokens count]; i++) {
-        [[tokens objectAtIndex:i] encodeToBuffer:buffer];
+        if (![[tokens objectAtIndex:i] encodeToBuffer:buffer]) return NO;
     }
     [buffer writeByte:0];
     return YES;
