@@ -16,6 +16,7 @@
 
 - (BOOL)encodeToBuffer:(ANBasicByteBuffer *)buffer {
     [super encodeToBuffer:buffer];
+    [buffer writeByte:self.printOutput];
     for (NSUInteger i = 0; i < [tokens count]; i++) {
         [[tokens objectAtIndex:i] encodeToBuffer:buffer];
     }
@@ -25,6 +26,7 @@
 
 + (id<ANBasicMCObject>)decodeFromBuffer:(ANBasicByteBuffer *)buffer type:(UInt8)readType {
     ANBasicTokenBlock * block = [[ANBasicTokenBlock alloc] init];
+    block.printOutput = [buffer readByte];
     while (true) {
         UInt8 type = [buffer readByte];
         if (type == 0) break;

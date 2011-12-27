@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'ANBasicRuntime' target in the 'ANBasicRuntime' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif

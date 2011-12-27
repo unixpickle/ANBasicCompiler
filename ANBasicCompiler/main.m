@@ -19,7 +19,7 @@ int main (int argc, const char * argv[]) {
         // my debug code, so that I can execute this through Xcode and test it
         // with my ANBasic script:
         //
-        return compileMain(@"/Users/alex/Desktop/sqrtprogram", @"/Users/alex/Desktop/compiled", "anbc");
+        return compileMain(@"/Users/alex/Desktop/basicassign", @"/Users/alex/Desktop/basicassign.bin", "anbc");
         
         /*
         if (argc == 1) {

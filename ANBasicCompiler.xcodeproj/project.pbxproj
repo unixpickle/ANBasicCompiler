@@ -34,6 +34,41 @@
 		FA50F487149CE20C0080E7B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA50F486149CE20C0080E7B6 /* Foundation.framework */; };
 		FA50F48A149CE20C0080E7B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA50F489149CE20C0080E7B6 /* main.m */; };
 		FA50F48E149CE20C0080E7B6 /* ANBasicCompiler.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA50F48D149CE20C0080E7B6 /* ANBasicCompiler.1 */; };
+		FA570B9414AA4F70001EF295 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA50F486149CE20C0080E7B6 /* Foundation.framework */; };
+		FA570B9714AA4F70001EF295 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA570B9614AA4F70001EF295 /* main.m */; };
+		FA570B9B14AA4F70001EF295 /* ANBasicRuntime.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA570B9A14AA4F70001EF295 /* ANBasicRuntime.1 */; };
+		FA570BA014AA4F8A001EF295 /* ANBasicToken.m in Sources */ = {isa = PBXBuildFile; fileRef = FA503DB714A56FDB00BFE121 /* ANBasicToken.m */; };
+		FA570BA214AA4F8A001EF295 /* ANBasicTokenOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = FA503DAB14A56FDB00BFE121 /* ANBasicTokenOperator.m */; };
+		FA570BA414AA4F8A001EF295 /* ANBasicTokenControl.m in Sources */ = {isa = PBXBuildFile; fileRef = FA503DAE14A56FDB00BFE121 /* ANBasicTokenControl.m */; };
+		FA570BA614AA4F8A001EF295 /* ANBasicTokenFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = FA503DAD14A56FDB00BFE121 /* ANBasicTokenFunction.m */; };
+		FA570BA814AA4F8A001EF295 /* ANBasicTokenString.m in Sources */ = {isa = PBXBuildFile; fileRef = FA503DB114A56FDB00BFE121 /* ANBasicTokenString.m */; };
+		FA570BAA14AA4F8A001EF295 /* ANBasicTokenVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = FA503DB314A56FDB00BFE121 /* ANBasicTokenVariable.m */; };
+		FA570BAC14AA4F8A001EF295 /* ANBasicTokenNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = FA503DB414A56FDB00BFE121 /* ANBasicTokenNumber.m */; };
+		FA570BAE14AA4F93001EF295 /* ANBasicByteBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = FA503E0014A64D5A00BFE121 /* ANBasicByteBuffer.m */; };
+		FA570BB014AA4F93001EF295 /* ANFloatingPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD56EA114A7ECCD002E452F /* ANFloatingPoint.m */; };
+		FA570BB214AA4FA3001EF295 /* ANBasicTokenControlBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = FA503DDA14A5702D00BFE121 /* ANBasicTokenControlBlock.m */; };
+		FA570BB414AA4FA3001EF295 /* ANBasicTokenLabelControlBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = FA503DCF14A5702D00BFE121 /* ANBasicTokenLabelControlBlock.m */; };
+		FA570BB614AA4FA3001EF295 /* ANBasicTokenGotoControlBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = FA503DD014A5702D00BFE121 /* ANBasicTokenGotoControlBlock.m */; };
+		FA570BB814AA4FA3001EF295 /* ANBasicTokenForControlBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = FA503DD414A5702D00BFE121 /* ANBasicTokenForControlBlock.m */; };
+		FA570BBA14AA4FA3001EF295 /* ANBasicTokenWhileControlBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = FA503DD514A5702D00BFE121 /* ANBasicTokenWhileControlBlock.m */; };
+		FA570BBC14AA4FA3001EF295 /* ANBasicTokenIfControlBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = FA503DD914A5702D00BFE121 /* ANBasicTokenIfControlBlock.m */; };
+		FA570BBE14AA4FA3001EF295 /* ANBasicTokenBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = FA503DC814A5701900BFE121 /* ANBasicTokenBlock.m */; };
+		FA570BBF14AA4FBD001EF295 /* ANBasicTokenControlBlock+MCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD56EAE14A7F3CC002E452F /* ANBasicTokenControlBlock+MCObject.m */; };
+		FA570BC014AA4FBD001EF295 /* ANBasicTokenIfControlBlock+MCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD56EB114A7F584002E452F /* ANBasicTokenIfControlBlock+MCObject.m */; };
+		FA570BC114AA4FBD001EF295 /* ANBasicTokenForControlBlock+MCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD56EB414A7F7AD002E452F /* ANBasicTokenForControlBlock+MCObject.m */; };
+		FA570BC214AA4FBD001EF295 /* ANBasicToken+MCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FA503E0414A64E7900BFE121 /* ANBasicToken+MCObject.m */; };
+		FA570BC314AA4FBD001EF295 /* ANBasicTokenOperator+MCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FA503E0714A64EF900BFE121 /* ANBasicTokenOperator+MCObject.m */; };
+		FA570BC414AA4FBD001EF295 /* ANBasicTokenString+MCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FA503E0A14A652CE00BFE121 /* ANBasicTokenString+MCObject.m */; };
+		FA570BC514AA4FBD001EF295 /* ANBasicTokenVariable+MCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FA503E0D14A653E200BFE121 /* ANBasicTokenVariable+MCObject.m */; };
+		FA570BC614AA4FBD001EF295 /* ANBasicTokenNumber+MCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD56EA414A7ED26002E452F /* ANBasicTokenNumber+MCObject.m */; };
+		FA570BC714AA4FBD001EF295 /* ANBasicTokenBlock+MCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FA503E1014A65C7E00BFE121 /* ANBasicTokenBlock+MCObject.m */; };
+		FA570BC814AA4FBD001EF295 /* ANBasicTokenFunction+MCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD56EA714A7EE52002E452F /* ANBasicTokenFunction+MCObject.m */; };
+		FA570BC914AA4FBD001EF295 /* ANBasicTokenControl+MCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD56EAA14A7F1AF002E452F /* ANBasicTokenControl+MCObject.m */; };
+		FA570BD414AA566B001EF295 /* ANBasicRuntimeState.m in Sources */ = {isa = PBXBuildFile; fileRef = FA570BCC14AA52A1001EF295 /* ANBasicRuntimeState.m */; };
+		FA570BD514AA566B001EF295 /* ANBasicToken+BasicRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = FA570BCF14AA5473001EF295 /* ANBasicToken+BasicRuntime.m */; };
+		FA570BD614AA566B001EF295 /* ANBasicTokenBlock+BasicRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = FA570BD214AA5657001EF295 /* ANBasicTokenBlock+BasicRuntime.m */; };
+		FA570BDA14AA5817001EF295 /* ANBasicTokenNumber+BasicRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = FA570BD814AA580B001EF295 /* ANBasicTokenNumber+BasicRuntime.m */; };
+		FA570BDE14AA5A47001EF295 /* ANBasicTokenVariable+BasicRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = FA570BDC14AA5884001EF295 /* ANBasicTokenVariable+BasicRuntime.m */; };
 		FAD56EA214A7ECCD002E452F /* ANFloatingPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD56EA114A7ECCD002E452F /* ANFloatingPoint.m */; };
 		FAD56EA514A7ED26002E452F /* ANBasicTokenNumber+MCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD56EA414A7ED26002E452F /* ANBasicTokenNumber+MCObject.m */; };
 		FAD56EA814A7EE52002E452F /* ANBasicTokenFunction+MCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD56EA714A7EE52002E452F /* ANBasicTokenFunction+MCObject.m */; };
@@ -51,6 +86,16 @@
 			dstSubfolderSpec = 0;
 			files = (
 				FA50F48E149CE20C0080E7B6 /* ANBasicCompiler.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		FA570B9014AA4F70001EF295 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				FA570B9B14AA4F70001EF295 /* ANBasicRuntime.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -111,6 +156,20 @@
 		FA50F489149CE20C0080E7B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FA50F48C149CE20C0080E7B6 /* ANBasicCompiler-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ANBasicCompiler-Prefix.pch"; sourceTree = "<group>"; };
 		FA50F48D149CE20C0080E7B6 /* ANBasicCompiler.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ANBasicCompiler.1; sourceTree = "<group>"; };
+		FA570B9214AA4F70001EF295 /* ANBasicRuntime */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ANBasicRuntime; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA570B9614AA4F70001EF295 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FA570B9914AA4F70001EF295 /* ANBasicRuntime-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ANBasicRuntime-Prefix.pch"; sourceTree = "<group>"; };
+		FA570B9A14AA4F70001EF295 /* ANBasicRuntime.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ANBasicRuntime.1; sourceTree = "<group>"; };
+		FA570BCB14AA52A1001EF295 /* ANBasicRuntimeState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANBasicRuntimeState.h; sourceTree = "<group>"; };
+		FA570BCC14AA52A1001EF295 /* ANBasicRuntimeState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANBasicRuntimeState.m; sourceTree = "<group>"; };
+		FA570BCE14AA5473001EF295 /* ANBasicToken+BasicRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ANBasicToken+BasicRuntime.h"; sourceTree = "<group>"; };
+		FA570BCF14AA5473001EF295 /* ANBasicToken+BasicRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ANBasicToken+BasicRuntime.m"; sourceTree = "<group>"; };
+		FA570BD114AA5657001EF295 /* ANBasicTokenBlock+BasicRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ANBasicTokenBlock+BasicRuntime.h"; sourceTree = "<group>"; };
+		FA570BD214AA5657001EF295 /* ANBasicTokenBlock+BasicRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ANBasicTokenBlock+BasicRuntime.m"; sourceTree = "<group>"; };
+		FA570BD714AA580B001EF295 /* ANBasicTokenNumber+BasicRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ANBasicTokenNumber+BasicRuntime.h"; sourceTree = "<group>"; };
+		FA570BD814AA580B001EF295 /* ANBasicTokenNumber+BasicRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ANBasicTokenNumber+BasicRuntime.m"; sourceTree = "<group>"; };
+		FA570BDB14AA5883001EF295 /* ANBasicTokenVariable+BasicRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ANBasicTokenVariable+BasicRuntime.h"; sourceTree = "<group>"; };
+		FA570BDC14AA5884001EF295 /* ANBasicTokenVariable+BasicRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ANBasicTokenVariable+BasicRuntime.m"; sourceTree = "<group>"; };
 		FAD56EA014A7ECCD002E452F /* ANFloatingPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANFloatingPoint.h; sourceTree = "<group>"; };
 		FAD56EA114A7ECCD002E452F /* ANFloatingPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANFloatingPoint.m; sourceTree = "<group>"; };
 		FAD56EA314A7ED26002E452F /* ANBasicTokenNumber+MCObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ANBasicTokenNumber+MCObject.h"; sourceTree = "<group>"; };
@@ -136,16 +195,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FA570B8F14AA4F70001EF295 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA570B9414AA4F70001EF295 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		FA503DA414A56EF000BFE121 /* Tokenizer */ = {
 			isa = PBXGroup;
 			children = (
-				FA503DC014A56FEF00BFE121 /* ANBasicTokenizer.m */,
-				FA503DC114A56FEF00BFE121 /* ANBasicTokenizedScript.m */,
-				FA503DC214A56FEF00BFE121 /* ANBasicTokenizedScript.h */,
 				FA503DC314A56FEF00BFE121 /* ANBasicTokenizer.h */,
+				FA503DC014A56FEF00BFE121 /* ANBasicTokenizer.m */,
+				FA503DC214A56FEF00BFE121 /* ANBasicTokenizedScript.h */,
+				FA503DC114A56FEF00BFE121 /* ANBasicTokenizedScript.m */,
 				FA503DA514A56F0200BFE121 /* Basic Tokens */,
 			);
 			path = Tokenizer;
@@ -243,10 +310,11 @@
 		FA50F477149CE20C0080E7B6 = {
 			isa = PBXGroup;
 			children = (
-				FAD56E9E14A7ECAD002E452F /* New Group */,
 				FA503DA414A56EF000BFE121 /* Tokenizer */,
 				FA503DA614A56F4300BFE121 /* Compiler */,
+				FA570BCA14AA5289001EF295 /* Runtime */,
 				FA50F488149CE20C0080E7B6 /* ANBasicCompiler */,
+				FA570B9514AA4F70001EF295 /* ANBasicRuntime */,
 				FA50F485149CE20C0080E7B6 /* Frameworks */,
 				FA50F483149CE20C0080E7B6 /* Products */,
 			);
@@ -256,6 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				FA50F482149CE20C0080E7B6 /* ANBasicCompiler */,
+				FA570B9214AA4F70001EF295 /* ANBasicRuntime */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -286,11 +355,39 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		FAD56E9E14A7ECAD002E452F /* New Group */ = {
+		FA570B9514AA4F70001EF295 /* ANBasicRuntime */ = {
 			isa = PBXGroup;
 			children = (
+				FA570B9614AA4F70001EF295 /* main.m */,
+				FA570B9A14AA4F70001EF295 /* ANBasicRuntime.1 */,
+				FA570B9814AA4F70001EF295 /* Supporting Files */,
 			);
-			name = "New Group";
+			path = ANBasicRuntime;
+			sourceTree = "<group>";
+		};
+		FA570B9814AA4F70001EF295 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA570B9914AA4F70001EF295 /* ANBasicRuntime-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FA570BCA14AA5289001EF295 /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				FA570BCB14AA52A1001EF295 /* ANBasicRuntimeState.h */,
+				FA570BCC14AA52A1001EF295 /* ANBasicRuntimeState.m */,
+				FA570BCE14AA5473001EF295 /* ANBasicToken+BasicRuntime.h */,
+				FA570BCF14AA5473001EF295 /* ANBasicToken+BasicRuntime.m */,
+				FA570BD114AA5657001EF295 /* ANBasicTokenBlock+BasicRuntime.h */,
+				FA570BD214AA5657001EF295 /* ANBasicTokenBlock+BasicRuntime.m */,
+				FA570BD714AA580B001EF295 /* ANBasicTokenNumber+BasicRuntime.h */,
+				FA570BD814AA580B001EF295 /* ANBasicTokenNumber+BasicRuntime.m */,
+				FA570BDB14AA5883001EF295 /* ANBasicTokenVariable+BasicRuntime.h */,
+				FA570BDC14AA5884001EF295 /* ANBasicTokenVariable+BasicRuntime.m */,
+			);
+			path = Runtime;
 			sourceTree = "<group>";
 		};
 		FAD56E9F14A7ECC3002E452F /* Utilities */ = {
@@ -337,6 +434,23 @@
 			productReference = FA50F482149CE20C0080E7B6 /* ANBasicCompiler */;
 			productType = "com.apple.product-type.tool";
 		};
+		FA570B9114AA4F70001EF295 /* ANBasicRuntime */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA570B9C14AA4F70001EF295 /* Build configuration list for PBXNativeTarget "ANBasicRuntime" */;
+			buildPhases = (
+				FA570B8E14AA4F70001EF295 /* Sources */,
+				FA570B8F14AA4F70001EF295 /* Frameworks */,
+				FA570B9014AA4F70001EF295 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ANBasicRuntime;
+			productName = ANBasicRuntime;
+			productReference = FA570B9214AA4F70001EF295 /* ANBasicRuntime */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -358,6 +472,7 @@
 			projectRoot = "";
 			targets = (
 				FA50F481149CE20C0080E7B6 /* ANBasicCompiler */,
+				FA570B9114AA4F70001EF295 /* ANBasicRuntime */,
 			);
 		};
 /* End PBXProject section */
@@ -399,6 +514,46 @@
 				FAD56EAF14A7F3CC002E452F /* ANBasicTokenControlBlock+MCObject.m in Sources */,
 				FAD56EB214A7F584002E452F /* ANBasicTokenIfControlBlock+MCObject.m in Sources */,
 				FAD56EB514A7F7AD002E452F /* ANBasicTokenForControlBlock+MCObject.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA570B8E14AA4F70001EF295 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA570B9714AA4F70001EF295 /* main.m in Sources */,
+				FA570BAE14AA4F93001EF295 /* ANBasicByteBuffer.m in Sources */,
+				FA570BB014AA4F93001EF295 /* ANFloatingPoint.m in Sources */,
+				FA570BA014AA4F8A001EF295 /* ANBasicToken.m in Sources */,
+				FA570BA214AA4F8A001EF295 /* ANBasicTokenOperator.m in Sources */,
+				FA570BA414AA4F8A001EF295 /* ANBasicTokenControl.m in Sources */,
+				FA570BA614AA4F8A001EF295 /* ANBasicTokenFunction.m in Sources */,
+				FA570BA814AA4F8A001EF295 /* ANBasicTokenString.m in Sources */,
+				FA570BAA14AA4F8A001EF295 /* ANBasicTokenVariable.m in Sources */,
+				FA570BAC14AA4F8A001EF295 /* ANBasicTokenNumber.m in Sources */,
+				FA570BB214AA4FA3001EF295 /* ANBasicTokenControlBlock.m in Sources */,
+				FA570BB414AA4FA3001EF295 /* ANBasicTokenLabelControlBlock.m in Sources */,
+				FA570BB614AA4FA3001EF295 /* ANBasicTokenGotoControlBlock.m in Sources */,
+				FA570BB814AA4FA3001EF295 /* ANBasicTokenForControlBlock.m in Sources */,
+				FA570BBA14AA4FA3001EF295 /* ANBasicTokenWhileControlBlock.m in Sources */,
+				FA570BBC14AA4FA3001EF295 /* ANBasicTokenIfControlBlock.m in Sources */,
+				FA570BBE14AA4FA3001EF295 /* ANBasicTokenBlock.m in Sources */,
+				FA570BBF14AA4FBD001EF295 /* ANBasicTokenControlBlock+MCObject.m in Sources */,
+				FA570BC014AA4FBD001EF295 /* ANBasicTokenIfControlBlock+MCObject.m in Sources */,
+				FA570BC114AA4FBD001EF295 /* ANBasicTokenForControlBlock+MCObject.m in Sources */,
+				FA570BC214AA4FBD001EF295 /* ANBasicToken+MCObject.m in Sources */,
+				FA570BC314AA4FBD001EF295 /* ANBasicTokenOperator+MCObject.m in Sources */,
+				FA570BC414AA4FBD001EF295 /* ANBasicTokenString+MCObject.m in Sources */,
+				FA570BC514AA4FBD001EF295 /* ANBasicTokenVariable+MCObject.m in Sources */,
+				FA570BC614AA4FBD001EF295 /* ANBasicTokenNumber+MCObject.m in Sources */,
+				FA570BC714AA4FBD001EF295 /* ANBasicTokenBlock+MCObject.m in Sources */,
+				FA570BC814AA4FBD001EF295 /* ANBasicTokenFunction+MCObject.m in Sources */,
+				FA570BC914AA4FBD001EF295 /* ANBasicTokenControl+MCObject.m in Sources */,
+				FA570BD414AA566B001EF295 /* ANBasicRuntimeState.m in Sources */,
+				FA570BD514AA566B001EF295 /* ANBasicToken+BasicRuntime.m in Sources */,
+				FA570BD614AA566B001EF295 /* ANBasicTokenBlock+BasicRuntime.m in Sources */,
+				FA570BDA14AA5817001EF295 /* ANBasicTokenNumber+BasicRuntime.m in Sources */,
+				FA570BDE14AA5A47001EF295 /* ANBasicTokenVariable+BasicRuntime.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +625,24 @@
 			};
 			name = Release;
 		};
+		FA570B9D14AA4F70001EF295 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ANBasicRuntime/ANBasicRuntime-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FA570B9E14AA4F70001EF295 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ANBasicRuntime/ANBasicRuntime-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -490,6 +663,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		FA570B9C14AA4F70001EF295 /* Build configuration list for PBXNativeTarget "ANBasicRuntime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA570B9D14AA4F70001EF295 /* Debug */,
+				FA570B9E14AA4F70001EF295 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
