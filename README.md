@@ -1,7 +1,7 @@
 ANBasic
 =======
 
-ANBasic is my personal spin on the primitive programming language used on my Casio fx-9750G Plus calculator. This project is going to process a script in ANBasic, process and tokenize it, group the tokens, and compile it to my own proprietary binary format. I will then make another project that is able to execute ANBasic binary files.
+ANBasic is my personal spin on the primitive programming language used on my Casio fx-9750G Plus calculator. This project is going to process a script in ANBasic, process and tokenize it, group the tokens, and compile it to my own proprietary binary format. This project also includes a runtime that loads a compiled ANBasic script, and executes it, printing output to the console.
 
 Sample ANBasic
 ==============
@@ -24,7 +24,9 @@ Here is a basic example of something that one could write in ANBasic to estimate
 Current Progress
 ================
 
-As of now, this code is able to process any ANBasic script file, and can group control blocks, mathematical expressions, etc. It then outputs the structure that the compiled binary file would follow. My next step will be to implement a binary encoder for the existing ANBasicToken representation that my classes generate. Scripts are processed by going through the following stages:
+As of now, this code is able to process any ANBasic script file, and can group control blocks, mathematical expressions, etc. It then outputs the structure that the compiled binary file would follow. I am currently working both on the compiler that will convert tokens to byte-code, and a runtime that will load byte-code and execute it.
+
+For those who are interested, these are the steps that my program goes through in order to process ANBasic scripts:
 
 * Tokenize the script, splitting up operators, control functions, variable names, and strings
 * Convert '-' operators into negation functions where appropriate
