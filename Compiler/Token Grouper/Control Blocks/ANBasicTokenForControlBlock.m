@@ -50,20 +50,14 @@ static BOOL _ForBlockGetRanges (ANBasicTokenBlock * aBlock, NSRange * initialRan
             stepValue = (ANBasicTokenNumber *)stepToken;
         }
         
-        // make sure that there is a variable and an assignment operator at the end
-        // of the initial for statement
-        if ([initialBlock.tokens count] < 3) return nil;
+        // make sure that there is an assigned variable at the end of the for
+        // loop header
+        if ([initialBlock.tokens count] < 2) return nil;
         ANBasicToken * _initialVariable = [initialBlock.tokens lastObject];
-        ANBasicToken * _initialAssign = [initialBlock.tokens objectAtIndex:([initialBlock.tokens count] - 2)];
         if (![_initialVariable isKindOfClass:[ANBasicTokenVariable class]]) return nil;
-        if (![_initialAssign isKindOfClass:[ANBasicTokenOperator class]]) return nil;
-        
-        ANBasicTokenOperator * _assignOperator = (ANBasicTokenOperator *)_initialAssign;
-        if (![[_assignOperator operatorName] isEqualToString:@"->"]) return nil;
-        
+                
         // extract the counter variable, and remove it from the initial statement
         counterVariable = (ANBasicTokenVariable *)_initialVariable;
-        [initialBlock.tokens removeLastObject];
         [initialBlock.tokens removeLastObject];
     }
     return self;

@@ -27,4 +27,6 @@
 - (NSData *)readDataOfLength:(NSUInteger)length;
 - (UInt8)readByte;
 
+- (NSData *)data;
+
 @end

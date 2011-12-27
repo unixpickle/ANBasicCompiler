@@ -30,11 +30,11 @@
         __unsafe_unretained Class class;
         ANBasicTokenControlBlockType blockType;
     } controlBlockTypes[] = {
-        {NSClassFromString(@"ANBasicTokenControlIfControlBlock"), ANBasicControlTypeIfStatement},
-        {NSClassFromString(@"ANBasicTokenControlWhileControlBlock"), ANBasicControlTypeWhileLoop},
-        {NSClassFromString(@"ANBasicTokenControlLabelControlBlock"), ANBasicControlTypeLabel},
-        {NSClassFromString(@"ANBasicTokenControlGotoControlBlock"), ANBasicControlTypeGoto},
-        {NSClassFromString(@"ANBasicTokenControlForControlBlock"), ANBasicControlTypeForLoop},
+        {NSClassFromString(@"ANBasicTokenIfControlBlock"), ANBasicControlTypeIfStatement},
+        {NSClassFromString(@"ANBasicTokenWhileControlBlock"), ANBasicControlTypeWhileLoop},
+        {NSClassFromString(@"ANBasicTokenLabelControlBlock"), ANBasicControlTypeLabel},
+        {NSClassFromString(@"ANBasicTokenGotoControlBlock"), ANBasicControlTypeGoto},
+        {NSClassFromString(@"ANBasicTokenForControlBlock"), ANBasicControlTypeForLoop},
         {Nil, 0}
     };
     for (int i = 0; controlBlockTypes[i].class != Nil; i++) {

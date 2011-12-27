@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "ANBasicTokenizedScript.h"
 #import "ANBasicTokenGrouper.h"
+#import "ANBasicToken+MCObject.h"
 
 int printUsage (const char * cmdName);
 int compileMain (NSString * inputFile, NSString * outputFile, const char * cmdName);
@@ -18,7 +19,7 @@ int main (int argc, const char * argv[]) {
         // my debug code, so that I can execute this through Xcode and test it
         // with my ANBasic script:
         //
-        return compileMain(@"/Users/alex/Desktop/myscript", nil, "anbc");
+        return compileMain(@"/Users/alex/Desktop/sqrtprogram", @"/Users/alex/Desktop/compiled", "anbc");
         
         /*
         if (argc == 1) {
@@ -66,6 +67,19 @@ int compileMain (NSString * inputFile, NSString * outputFile, const char * cmdNa
         return 1;
     }
     NSLog(@"%@", block);
+    
+    ANBasicByteBuffer * buffer = [[ANBasicByteBuffer alloc] init];
+    if (![block encodeToBuffer:buffer]) {
+        fprintf(stderr, "%s: error: failed to encode machine code\n", cmdName);
+    }
+    [[buffer data] writeToFile:outputFile atomically:YES];
+    
+    [buffer setOffset:0];
+    UInt8 typeByte = [buffer readByte];
+    ANBasicTokenBlock * decoded = (id)[ANBasicTokenBlock decodeFromBuffer:buffer type:typeByte];
+    
+    NSLog(@"Decoded: %@", decoded);
+    
     return 0;
 }
 

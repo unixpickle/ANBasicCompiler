@@ -11,6 +11,7 @@
 @implementation ANBasicTokenVariable (MCObject)
 
 + (NSString *)variableNameFromNumber:(UInt8)varNum {
+    varNum &= (0xff ^ 0b10000000);
     char varChar = 'A' + varNum;
     return [NSString stringWithFormat:@"%c", varChar];
 }
@@ -26,15 +27,22 @@
 }
 
 - (BOOL)encodeToBuffer:(ANBasicByteBuffer *)buffer {
+    UInt8 varNum = [[self class] variableNumberFromName:variableName];
+    varNum |= (self.isAssignment << 7);
     [super encodeToBuffer:buffer];
-    [buffer writeByte:[[self class] variableNumberFromName:variableName]];
+    [buffer writeByte:varNum];
     return YES;
 }
 
 + (id<ANBasicMCObject>)decodeFromBuffer:(ANBasicByteBuffer *)buffer type:(UInt8)readType {
-    NSString * varName = [[self class] variableNameFromNumber:[buffer readByte]];
+    UInt8 varNum = [buffer readByte];
+    NSString * varName = [[self class] variableNameFromNumber:varNum];
     if (!varName) return nil;
-    return [[ANBasicTokenVariable alloc] initWithVariableName:varName];
+    ANBasicTokenVariable * variable = [[ANBasicTokenVariable alloc] initWithVariableName:varName];
+    if ((varNum & 0b10000000) != 0) {
+        [variable setIsAssignment:YES];
+    }
+    return variable;
 }
 
 @end

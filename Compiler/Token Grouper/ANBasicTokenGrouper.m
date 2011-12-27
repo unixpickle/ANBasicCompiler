@@ -120,6 +120,9 @@
         }
         
         ANBasicToken * token = [self readSubBlockOrReturn:nextLine];
+        if (!token) {
+            NSLog(@"PENSI");
+        }
         if (!token) return nil;
         [[block tokens] addObject:token];
     }

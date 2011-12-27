@@ -29,6 +29,7 @@
         UInt8 type = [buffer readByte];
         if (type == 0) break;
         ANBasicToken * token = (ANBasicToken *)[ANBasicToken decodeFromBuffer:buffer type:type];
+        if (!token) return nil;
         [block.tokens addObject:token];
     }
     return block;

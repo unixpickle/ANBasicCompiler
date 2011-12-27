@@ -43,7 +43,7 @@ const struct {
 
 - (BOOL)encodeToBuffer:(ANBasicByteBuffer *)buffer {
     ANBasicTokenControlID controlID = [[self class] controlIDForName:self.controlName];
-    if (controlID == ANBasicTokenControlIDNotFound) return nil;
+    if (controlID == ANBasicTokenControlIDNotFound) return NO;
     [super encodeToBuffer:buffer];
     [buffer writeByte:controlID];
     return YES;

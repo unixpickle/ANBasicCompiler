@@ -72,4 +72,8 @@
     return buffer[offset++];
 }
 
+- (NSData *)data {
+    return data;
+}
+
 @end

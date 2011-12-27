@@ -19,7 +19,7 @@
     } else {
         [buffer writeByte:0];
     }
-    return nil;
+    return YES;
 }
 
 + (ANBasicTokenControlBlock *)decodeFromBuffer:(ANBasicByteBuffer *)buffer withCBType:(ANBasicTokenControlBlockType)blockType {
