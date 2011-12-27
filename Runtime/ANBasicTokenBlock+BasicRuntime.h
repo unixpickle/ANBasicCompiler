@@ -8,6 +8,7 @@
 
 #import "ANBasicTokenBlock.h"
 #import "ANBasicToken+BasicRuntime.h"
+#import "ANBasicTokenOperator+BasicRuntime.h"
 
 @interface ANBasicTokenBlock (BasicRuntime)
 

@@ -69,6 +69,7 @@
 		FA570BD614AA566B001EF295 /* ANBasicTokenBlock+BasicRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = FA570BD214AA5657001EF295 /* ANBasicTokenBlock+BasicRuntime.m */; };
 		FA570BDA14AA5817001EF295 /* ANBasicTokenNumber+BasicRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = FA570BD814AA580B001EF295 /* ANBasicTokenNumber+BasicRuntime.m */; };
 		FA570BDE14AA5A47001EF295 /* ANBasicTokenVariable+BasicRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = FA570BDC14AA5884001EF295 /* ANBasicTokenVariable+BasicRuntime.m */; };
+		FA8FBBF114AA70AE005D26AD /* ANBasicTokenOperator+BasicRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8FBBEE14AA70A3005D26AD /* ANBasicTokenOperator+BasicRuntime.m */; };
 		FAD56EA214A7ECCD002E452F /* ANFloatingPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD56EA114A7ECCD002E452F /* ANFloatingPoint.m */; };
 		FAD56EA514A7ED26002E452F /* ANBasicTokenNumber+MCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD56EA414A7ED26002E452F /* ANBasicTokenNumber+MCObject.m */; };
 		FAD56EA814A7EE52002E452F /* ANBasicTokenFunction+MCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD56EA714A7EE52002E452F /* ANBasicTokenFunction+MCObject.m */; };
@@ -170,6 +171,8 @@
 		FA570BD814AA580B001EF295 /* ANBasicTokenNumber+BasicRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ANBasicTokenNumber+BasicRuntime.m"; sourceTree = "<group>"; };
 		FA570BDB14AA5883001EF295 /* ANBasicTokenVariable+BasicRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ANBasicTokenVariable+BasicRuntime.h"; sourceTree = "<group>"; };
 		FA570BDC14AA5884001EF295 /* ANBasicTokenVariable+BasicRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ANBasicTokenVariable+BasicRuntime.m"; sourceTree = "<group>"; };
+		FA8FBBED14AA70A3005D26AD /* ANBasicTokenOperator+BasicRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ANBasicTokenOperator+BasicRuntime.h"; sourceTree = "<group>"; };
+		FA8FBBEE14AA70A3005D26AD /* ANBasicTokenOperator+BasicRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ANBasicTokenOperator+BasicRuntime.m"; sourceTree = "<group>"; };
 		FAD56EA014A7ECCD002E452F /* ANFloatingPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANFloatingPoint.h; sourceTree = "<group>"; };
 		FAD56EA114A7ECCD002E452F /* ANFloatingPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANFloatingPoint.m; sourceTree = "<group>"; };
 		FAD56EA314A7ED26002E452F /* ANBasicTokenNumber+MCObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ANBasicTokenNumber+MCObject.h"; sourceTree = "<group>"; };
@@ -386,6 +389,8 @@
 				FA570BD814AA580B001EF295 /* ANBasicTokenNumber+BasicRuntime.m */,
 				FA570BDB14AA5883001EF295 /* ANBasicTokenVariable+BasicRuntime.h */,
 				FA570BDC14AA5884001EF295 /* ANBasicTokenVariable+BasicRuntime.m */,
+				FA8FBBED14AA70A3005D26AD /* ANBasicTokenOperator+BasicRuntime.h */,
+				FA8FBBEE14AA70A3005D26AD /* ANBasicTokenOperator+BasicRuntime.m */,
 			);
 			path = Runtime;
 			sourceTree = "<group>";
@@ -554,6 +559,7 @@
 				FA570BD614AA566B001EF295 /* ANBasicTokenBlock+BasicRuntime.m in Sources */,
 				FA570BDA14AA5817001EF295 /* ANBasicTokenNumber+BasicRuntime.m in Sources */,
 				FA570BDE14AA5A47001EF295 /* ANBasicTokenVariable+BasicRuntime.m in Sources */,
+				FA8FBBF114AA70AE005D26AD /* ANBasicTokenOperator+BasicRuntime.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,6 +677,7 @@
 				FA570B9E14AA4F70001EF295 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
