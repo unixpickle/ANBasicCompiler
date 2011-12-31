@@ -52,8 +52,7 @@ For those who are interested, these are the steps that my program goes through i
 License
 =======
 
-Copyright (c) 2011, Alex Nichol
-All rights reserved.
+Copyright (c) 2011, Alex Nichol<br />All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 
