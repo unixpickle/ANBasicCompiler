@@ -65,7 +65,8 @@ int compileMain (NSString * inputFile, NSString * outputFile, const char * cmdNa
         fprintf(stderr, "%s: error: code group failed\n", cmdName);
         return 1;
     }
-    NSLog(@"%@", block);
+    
+    // NSLog(@"%@", block);
     
     ANBasicByteBuffer * buffer = [[ANBasicByteBuffer alloc] init];
     if (![block encodeToBuffer:buffer]) {
@@ -78,8 +79,12 @@ int compileMain (NSString * inputFile, NSString * outputFile, const char * cmdNa
     [buffer setOffset:0];
     UInt8 typeByte = [buffer readByte];
     ANBasicTokenBlock * decoded = (id)[ANBasicTokenBlock decodeFromBuffer:buffer type:typeByte];
+    if (!decoded) {
+        fprintf(stderr, "%s: warning: code re-decode failed\n", cmdName);
+        return 1;
+    }
     
-    NSLog(@"Decoded: %@", decoded);
+    // NSLog(@"Decoded: %@", decoded);
     
     return 0;
 }
