@@ -20,6 +20,11 @@
         if (![self.loopBody executeToken:state]) return NO;
     } while ([state returnType] == ANBasicRuntimeReturnTypeValue);
     
+    if ([state returnType] == ANBasicRuntimeReturnTypeBreak) {
+        // they have successfully broken from a loop!
+        [state resetReturnState];
+    }
+    
     return YES;
 }
 
