@@ -67,4 +67,18 @@
     isOnNewLine = YES;
 }
 
+- (NSString *)promptInput {
+    [self print:@"?\n" requireNewLine:NO];
+    NSMutableString * readString = [NSMutableString string];
+    int aChar;
+    while ((aChar = fgetc(stdin)) != EOF) {
+        if (aChar == '\n') break;
+        else if (aChar != '\r') {
+            [readString appendFormat:@"%C", aChar];
+        }
+    }
+    isOnNewLine = YES;
+    return [NSString stringWithString:readString];
+}
+
 @end

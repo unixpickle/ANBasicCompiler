@@ -21,8 +21,8 @@
         if (aChar > 0 && aChar < 256) {
             [buffer writeByte:(UInt8)aChar];
         }
-        [buffer writeByte:0];
     }
+    [buffer writeByte:0];
     return YES;
 }
 

@@ -37,5 +37,6 @@ typedef enum {
 
 - (void)print:(NSString *)str requireNewLine:(BOOL)newLine;
 - (void)promptMore;
+- (NSString *)promptInput;
 
 @end
