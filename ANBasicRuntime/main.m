@@ -14,15 +14,14 @@ int runtimeMain (const char * cmdName, NSString * scriptName);
 
 int main (int argc, const char * argv[]) {
     @autoreleasepool {
-        runtimeMain("anbrun", @"/Users/alex/Desktop/sqrtprogram.bin");
-        /*
+        //runtimeMain("anbrun", @"/Users/alex/Desktop/sqrtprogram.bin");
+        
         if (argc != 2) {
             fprintf(stderr, "Usage: %s <compiled script>\n", argv[0]);
             return 1;
         }
         NSString * scriptPath = [NSString stringWithUTF8String:argv[1]];
         return runtimeMain(argv[0], scriptPath);
-         */
     }
     return 0;
 }
